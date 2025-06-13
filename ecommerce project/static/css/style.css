@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+    font-size: 14px;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    object-position: top;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.oldprice {
+    font-weight: bold;
+    color: red;
+}
+
+.newprice {
+    font-weight: bold;
+    background-color: green;
+    color: white;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+.kb {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+
+}
+
+
+.kc {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.kc:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.kd {
+    flex-grow: 1;
+    padding: 1.25rem;
+}
+
+/* Responsive adjustments  */
+@media (max-width: 768px) {
+    .kb {
+        height: 150px;
+    }
+}
+
+/* index products */
+.ka {
+    height: 200px;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+    background-color: #f8f8f8;
+    /* Optional: fills empty space */
+    padding: 10px;
+
+}
+.footer{
+    margin-top: 30px;
+}
+.pic-box{
+    position: relative;
+}
+.hot{
+    background-color: orange;
+    display: inline;
+    color: white;
+    width: 50px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    right: 50px;
+    z-index: 10;
+}
+
+
+
+
