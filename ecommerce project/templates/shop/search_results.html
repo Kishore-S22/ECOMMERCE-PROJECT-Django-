@@ -1,0 +1,30 @@
+{% extends 'shop/layouts/main.html' %}
+{% block content %}
+
+<div class="container mt-4">
+    <h3>Search Results for "{{ query }}"</h3>
+
+    {% if products %}
+    <div class="row">
+        {% for product in products %}
+        <div class="col-md-4">
+            <div class="card mb-3">
+                <img src="{{ product.product_image.url }}" class="img-fluid"
+                    style="max-height: 200px; object-fit: contain;" alt="{{ product.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text">₹{{ product.selling_price }}</p>
+                    <a href="{% url 'product_detail' product.category.name product.name %}"
+                        class="btn btn-dark">View</a>
+
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p>No products found matching your search.</p>
+    {% endif %}
+</div>
+
+{% endblock %}
